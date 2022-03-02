@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="dist/style.css">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+<body>
+  <header>
+    <img src="app/img/logo.svg" alt="Splitter" class="logo">
+  </header>
+
+  <div class="calculator">
+    <form class="calculator__options">
+      <div class="calculator__option calculator__option--bill">
+        <label for="bill">Bill</label>
+        <img src="/app/img/icon-dollar.svg" alt="$">
+        <input type="text" id="bill">
+      </div>
+
+      <div class="calculator__option calculator__option--tip">
+        <label for="tip">Select Tip %</label>
+        <input type="button" value="5%" class="button--cyan">
+        <input type="button" value="10%" class="button--cyan">
+        <input type="button" value="15%" class="button--cyan">
+        <input type="button" value="25%" class="button--cyan">
+        <input type="button" value="50%" class="button--cyan">
+        <input type="button" value="Custom" class="button--grey">
+      </div>
+
+      <div class="calculator__option calculator_option--number-people">
+        <label for="number-people">Number of People</label>
+        <img src="app/img/icon-person.svg" class="input_icon">
+        <input type="text" id="number-people">
+      </div>
+    </form>
+
+    <main class="calculator__results">
+      <div class="calculator__result calculator__result--tip-amount">
+        <h1 class="value tip-amount"><img src="/app/img/icon-dollar.svg" alt="$"> 4.27</h1>
+        <h2 class="title tip-amount">Tip Amount</h2>
+        <p class="description tip-amount">/ person</p>
+      </div>
+      
+      <div class="calculator__result calculator__result--total">
+        <h1 class="value total"><img src="/app/img/icon-dollar.svg" alt="$"> 32.79</h1>
+        <h2 class="title total">Tip Amount</h2>
+        <p class="description total">/ person</p>
+      </div>
+
+      <button>Reset</button>
+    </main>
+  </div>
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/elisa-charrier" target="_blank">Elisa Charrier</a>.
+    </div>
+  </footer>  
+</body>
+</html>

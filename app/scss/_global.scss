@@ -1,0 +1,34 @@
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $lightGreyishCyan;
+    font-family: $fontFamily;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+
+    padding: 2.8rem 0 2.2rem 0;
+}
+
+footer {
+    background-color: $lightGreyishCyan2;
+    .attribution { 
+        font-size: 11px; 
+        text-align: center; 
+    }
+    
+    .attribution a { 
+        color: hsl(228, 45%, 44%); 
+    }
+}
