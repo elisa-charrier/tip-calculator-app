@@ -1,0 +1,286 @@
+/* OBJECTIVES
+1. Responsive layout
+2. Interactive elements (:hover)
+3. Calculate the correct tip and total cost of the bill per person (JS)
+
+STEPS
+4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
+5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
+6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+*/
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 100%;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+button, input {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+input {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  margin: 0;
+}
+
+body {
+  background-color: #c5e4e7;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: .9rem;
+  color: #5e7a7d;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2.8rem 0 2.2rem 0;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  background-color: #f4fafa;
+}
+
+footer .attribution {
+  padding: .4rem;
+  font-size: .7rem;
+  font-weight: 400;
+}
+
+footer .attribution a {
+  display: inline-block;
+  text-decoration: none;
+  color: #00494d;
+  -webkit-transition: all .25s ease-in .25s;
+  transition: all .25s ease-in .25s;
+}
+
+footer .attribution a:hover {
+  color: #26c0ab;
+  font-weight: 700;
+  font-size: .8rem;
+  letter-spacing: .05rem;
+  -webkit-transition: all .25s ease-in .25s;
+  transition: all .25s ease-in .25s;
+}
+
+@media only screen and (min-width: 940px) {
+  body {
+    position: relative;
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: 9rem;
+  }
+  header {
+    padding: 9rem 0 4.8rem 0;
+  }
+  footer {
+    position: absolute;
+    bottom: 0;
+    background-color: inherit;
+  }
+}
+
+.button {
+  border-radius: 5px;
+  padding: .8rem;
+  font-size: 1rem;
+  color: white;
+}
+
+.button--cyan {
+  background-color: #00494d;
+}
+
+.button--grey {
+  background-color: #f4fafa;
+  color: #5e7a7d;
+}
+
+.button--reset {
+  width: 100%;
+  padding: 1rem;
+  background-color: #26c0ab;
+  font-size: .8rem;
+  text-transform: uppercase;
+  color: #00494d;
+}
+
+.calculator {
+  background-color: white;
+  padding: 2.1rem 2.1rem 1.8rem 2.1rem;
+  border-radius: 20px 20px 0 0;
+}
+
+.calculator__options {
+  padding-bottom: 1.8rem;
+}
+
+.calculator__option:first-of-type {
+  padding-top: 0;
+}
+
+.calculator__option {
+  padding-top: 2.1rem;
+}
+
+.calculator__option--tip {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: .9rem;
+}
+
+.calculator__option--tip label {
+  grid-column: span 2;
+}
+
+.calculator__results {
+  padding: 2.5rem 1.3rem 1.3rem 1.3rem;
+  background-color: #00494d;
+  border-radius: 20px;
+}
+
+.calculator__result {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: "title value" "subtitle value";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 1.8rem;
+}
+
+.calculator__result:last-of-type {
+  padding-bottom: 2rem;
+}
+
+@media only screen and (min-width: 940px) {
+  .calculator {
+    max-width: 920px;
+    padding: 1.8rem 2.7rem 1.8rem 2.7rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    border-radius: 20px;
+  }
+  .calculator__options {
+    padding-top: 1rem;
+    padding-bottom: .8rem;
+    padding-right: 2.7rem;
+  }
+  .calculator__option--tip {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .calculator__option--tip label {
+    grid-column: span 3;
+  }
+  .calculator__results {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 3.4rem 2.3rem 2.3rem 2.3rem;
+  }
+}
+
+.option__label {
+  display: block;
+}
+
+.option__wrapper {
+  position: relative;
+  margin-top: .5rem;
+}
+
+.option__icon {
+  position: absolute;
+  top: .8rem;
+  left: 1rem;
+}
+
+.option__input {
+  width: 100%;
+  padding: .8rem 1rem .8rem 1rem;
+  background-color: #f4fafa;
+  text-align: right;
+  font-size: 1rem;
+  color: #00494d;
+  cursor: text;
+}
+
+.result__value {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: value;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  font-size: 1.3rem;
+  color: #26c0ab;
+}
+
+.result__title {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: title;
+  font-size: .8rem;
+  color: white;
+}
+
+.result__subtitle {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: subtitle;
+  font-size: .8rem;
+  color: #7f9c9f;
+}
+
+@media only screen and (min-width: 940px) {
+  .result__value {
+    font-size: 2rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

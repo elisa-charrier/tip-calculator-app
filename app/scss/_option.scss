@@ -1,0 +1,25 @@
+.option {
+    &__label {
+        display: block;
+    }
+    &__wrapper {
+        position: relative;
+        margin-top: .5rem;
+    }
+    &__icon {
+        position: absolute;
+        top: .8rem;
+        left: 1rem;
+    }
+    &__input {
+        width: 100%;
+        padding: .8rem 1rem .8rem 1rem;
+        
+        background-color: $lightGreyishCyan2;
+        
+        text-align: right;
+        font-size: 1rem ;
+        color: $veryDarkCyan;
+        cursor: text;
+    }
+}

@@ -9,9 +9,28 @@ html {
     padding: 0;
 }
 
+button, input {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+input {
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    margin: 0;
+}
+
 body {
     background-color: $lightGreyishCyan;
+
     font-family: $fontFamily;
+    font-weight: $boldFontWeight;
+    font-size: .9rem; // 16px
+    color: $darkGreyishCyan;
 }
 
 header {
@@ -22,13 +41,53 @@ header {
 }
 
 footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
     background-color: $lightGreyishCyan2;
+
     .attribution { 
-        font-size: 11px; 
-        text-align: center; 
+        padding: .4rem;
+
+        font-size: .7rem;
+        font-weight: $lightFontWeight;
     }
     
-    .attribution a { 
-        color: hsl(228, 45%, 44%); 
+    .attribution a {
+        display: inline-block;
+
+        text-decoration: none; 
+        color: $veryDarkCyan; 
+
+        transition: all .25s ease-in .25s;
+    }
+
+    .attribution a:hover {
+        color: $strongCyan;
+        font-weight: $boldFontWeight;
+        font-size: .8rem;
+        letter-spacing: .05rem;
+
+        transition: all .25s ease-in .25s;
+    }
+}
+
+@media only screen and (min-width: $resizeAt) {
+    body {
+        position: relative;
+        display: grid;
+        justify-content: center;
+        padding-bottom: 9rem;
+    }
+
+    header {
+        padding: 9rem 0 4.8rem 0;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0;
+        background-color: inherit;
     }
 }

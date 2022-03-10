@@ -1,0 +1,24 @@
+.button {
+    border-radius: 5px;
+    padding: .8rem;
+
+    font-size: 1rem; // 18px
+    color: $white;
+
+    &--cyan {
+        background-color: $veryDarkCyan;
+    }
+    &--grey {
+        background-color: $lightGreyishCyan2;
+        color: $darkGreyishCyan;
+    }
+    &--reset {
+        width: 100%;
+        padding: 1rem;
+        background-color: $strongCyan;
+
+        font-size: .8rem; // 15px
+        text-transform: uppercase;
+        color: $veryDarkCyan;
+    }
+}

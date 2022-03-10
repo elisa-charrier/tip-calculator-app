@@ -1,17 +1,17 @@
 // Layout
-$mobile: 375px;
-$desktop: 1440px;
-$resizeAt: 775px;
+$resizeAt: 940px;
 
 // Colors
-$strongCyan: hsl(172, 67%, 45%);
-$veryDarkCyan: hsl(183, 100%, 15%);
-$darkGreyishCyan: hsl(186, 14%, 43%);
-$darkGreyishCyan2: hsl(184, 14%, 56%);
+$strongCyan: hsl(172, 67%, 45%); // hover, result-value
+$veryDarkCyan: hsl(183, 100%, 15%); // buttons, text-input
+$darkGreyishCyan: hsl(186, 14%, 43%); // text
+$darkGreyishCyan2: hsl(184, 14%, 56%); // titles
 $lightGreyishCyan: hsl(185, 41%, 84%); // background
-$lightGreyishCyan2: hsl(189, 41%, 97%);
+$lightGreyishCyan2: hsl(189, 41%, 97%); // input, custom-button
 $white: hsl(0, 0%, 100%);
 
 // Typography
 $bodyCopyFontSize: 1.34rem; // 24px, for form inputs
-$fontFamily: 'Space Mono', monospace;;
+$fontFamily: 'Space Mono', monospace;
+$lightFontWeight: 400;
+$boldFontWeight: 700;

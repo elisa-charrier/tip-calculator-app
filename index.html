@@ -18,42 +18,50 @@
   <div class="calculator">
     <form class="calculator__options">
       <div class="calculator__option calculator__option--bill">
-        <label for="bill">Bill</label>
-        <img src="/app/img/icon-dollar.svg" alt="$">
-        <input type="text" id="bill">
+        <label class="option__label" for="bill">Bill</label>
+        <div class="option__wrapper">
+          <img class="option__icon" src="/app/img/icon-dollar.svg" alt="$">
+          <input type="number" min="0.01" step="0.01" id="bill" class="option__input">
+        </div>
       </div>
 
       <div class="calculator__option calculator__option--tip">
-        <label for="tip">Select Tip %</label>
-        <input type="button" value="5%" class="button--cyan">
-        <input type="button" value="10%" class="button--cyan">
-        <input type="button" value="15%" class="button--cyan">
-        <input type="button" value="25%" class="button--cyan">
-        <input type="button" value="50%" class="button--cyan">
-        <input type="button" value="Custom" class="button--grey">
+        <label class="option__label" for="tip">Select Tip %</label>
+        <input type="button" value="5%" class="button button--cyan">
+        <input type="button" value="10%" class="button button--cyan">
+        <input type="button" value="15%" class="button button--cyan">
+        <input type="button" value="25%" class="button button--cyan">
+        <input type="button" value="50%" class="button button--cyan">
+        <input type="button" value="Custom" class="button button--grey">
       </div>
 
       <div class="calculator__option calculator_option--number-people">
-        <label for="number-people">Number of People</label>
-        <img src="app/img/icon-person.svg" class="input_icon">
-        <input type="text" id="number-people">
+        <label class="option__label" for="number-people">Number of People</label>
+        <div class="option__wrapper">
+          <img src="app/img/icon-person.svg" class="option__icon">
+          <input type="number" min="1" max="100" step="1" id="number-people" class="option__input">
+        </div>
       </div>
     </form>
 
     <main class="calculator__results">
-      <div class="calculator__result calculator__result--tip-amount">
-        <h1 class="value tip-amount"><img src="/app/img/icon-dollar.svg" alt="$"> 4.27</h1>
-        <h2 class="title tip-amount">Tip Amount</h2>
-        <p class="description tip-amount">/ person</p>
-      </div>
+      <div>
+
+        <div class="calculator__result calculator__result calculator__result--tip-amount">
+          <h1 class="result__value value--tip-amount">$ 4.27</h1>
+          <h2 class="result__title title--tip-amount">Tip Amount</h2>
+          <p class="result__subtitle subtitle--tip-amount">/ person</p>
+        </div>
+        
+        <div class="calculator__result calculator__result calculator__result--total">
+          <h1 class="result__value value--total">$ 32.79</h1>
+          <h2 class="result__title title--total">Total</h2>
+          <p class="result__subtitle subtitle--total">/ person</p>
+        </div>
       
-      <div class="calculator__result calculator__result--total">
-        <h1 class="value total"><img src="/app/img/icon-dollar.svg" alt="$"> 32.79</h1>
-        <h2 class="title total">Tip Amount</h2>
-        <p class="description total">/ person</p>
       </div>
 
-      <button>Reset</button>
+      <button class="button button--reset">Reset</button>
     </main>
   </div>
 
