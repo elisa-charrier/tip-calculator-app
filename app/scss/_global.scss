@@ -48,8 +48,9 @@ footer {
     background-color: $lightGreyishCyan2;
 
     .attribution { 
-        padding: .4rem;
+        padding: .4rem 5rem;
 
+        text-align: center;
         font-size: .7rem;
         font-weight: $lightFontWeight;
     }
@@ -87,8 +88,6 @@ footer {
     }
 
     footer {
-        position: absolute;
-        bottom: 0;
         background-color: inherit;
     }
 }

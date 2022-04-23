@@ -68,7 +68,8 @@ footer {
 }
 
 footer .attribution {
-  padding: .4rem;
+  padding: .4rem 5rem;
+  text-align: center;
   font-size: .7rem;
   font-weight: 400;
 }
@@ -105,8 +106,6 @@ footer .attribution a:hover {
     padding: 9rem 0 4.8rem 0;
   }
   footer {
-    position: absolute;
-    bottom: 0;
     background-color: inherit;
   }
 }
