@@ -65,6 +65,7 @@ footer {
           justify-content: center;
   width: 100%;
   color: #5e7a7d;
+  background-color: white;
 }
 
 footer .attribution {
@@ -104,6 +105,9 @@ footer .attribution a:hover {
   }
   header {
     padding: 9rem 0 4.8rem 0;
+  }
+  footer {
+    background-color: inherit;
   }
 }
 
