@@ -45,21 +45,21 @@ footer {
     justify-content: center;
     width: 100%;
 
-    background-color: $lightGreyishCyan2;
+    color: $darkGreyishCyan;
 
     .attribution { 
         padding: .4rem 5rem;
 
         text-align: center;
         font-size: .7rem;
-        font-weight: $lightFontWeight;
+        font-weight: $boldFontWeight
     }
     
     .attribution a {
         display: inline-block;
 
-        text-decoration: none; 
-        color: $veryDarkCyan; 
+        color: $veryDarkCyan;
+        text-decoration: none;  
 
         transition: all .25s ease-in .25s;
     }
@@ -85,9 +85,5 @@ footer {
 
     header {
         padding: 9rem 0 4.8rem 0;
-    }
-
-    footer {
-        background-color: inherit;
     }
 }

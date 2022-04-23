@@ -55,7 +55,7 @@ function reset() {
 }
 function resetTips () {
     for (const button of tipButtons) {
-        button.style.color = `hsl(189, 41%, 97%)`; // light greyish cyan 2
+        button.style.color = `white`; 
         button.style.backgroundColor = `hsl(183, 100%, 15%)`; // very dark cyan
     }
 }
