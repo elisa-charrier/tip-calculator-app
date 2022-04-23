@@ -43,7 +43,7 @@ body {
   font-family: "Space Mono", monospace;
   font-weight: 700;
   font-size: .9rem;
-  color: #5e7a7d;
+  color: #587174;
 }
 
 header {
@@ -64,7 +64,7 @@ footer {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  color: #5e7a7d;
+  color: #003f42;
   background-color: white;
 }
 
@@ -72,13 +72,14 @@ footer .attribution {
   padding: .4rem 5rem;
   text-align: center;
   font-size: .7rem;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 footer .attribution a {
   display: inline-block;
-  color: #003f42;
+  color: inherit;
   text-decoration: none;
+  font-weight: 700;
   -webkit-transition: all .25s ease-in .25s;
   transition: all .25s ease-in .25s;
 }
@@ -130,7 +131,7 @@ footer .attribution a:hover {
 
 .button--grey {
   background-color: #f4fafa;
-  color: #5e7a7d;
+  color: #587174;
 }
 
 .button--grey:hover {

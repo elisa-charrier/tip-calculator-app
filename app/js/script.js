@@ -38,7 +38,8 @@ function reset() {
     customButton[0].value = `Custom`;
     customButton[0].style.textAlign = `center`;
     customButton[0].style.border = `none`;
- 
+    customButton[0].style.color = `hsl(186, 14%, 40%)`;
+
     // reset number of people log, input and border
     numPeopleLog.textContent = '';
     numPeopleInput.value = '';
