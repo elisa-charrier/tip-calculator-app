@@ -1,4 +1,5 @@
 .button {
+    width: 100%;
     border-radius: 5px;
     padding: .8rem;
 
@@ -7,10 +8,19 @@
 
     &--cyan {
         background-color: $veryDarkCyan;
+        
+        &:hover {
+            background-color: $strongCyan;
+            color: $veryDarkCyan;
+        }
     }
     &--grey {
         background-color: $lightGreyishCyan2;
         color: $darkGreyishCyan;
+
+        &:hover {
+            color: $veryDarkCyan;
+        }
     }
     &--reset {
         width: 100%;
@@ -20,5 +30,9 @@
         font-size: .8rem; // 15px
         text-transform: uppercase;
         color: $veryDarkCyan;
+
+        &:hover {
+            background-color: $lightGreyishCyan;
+        }
     }
 }

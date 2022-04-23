@@ -17,8 +17,8 @@
             grid-template-columns: 1fr 1fr;
             gap: .9rem;
 
-            label {
-                grid-column: span 2;
+            & > .option__log {
+                text-align: right;
             }
         }
     }
@@ -63,8 +63,8 @@
             &--tip {
                 grid-template-columns: repeat(3, 1fr);
     
-                label {
-                    grid-column: span 3;
+                & > .option__log {
+                    grid-column: span 2;
                 }
             }
         }
