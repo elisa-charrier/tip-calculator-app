@@ -29,12 +29,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./_design/my-desktop-design.png)
+![](./_design/my-mobile-design.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/elisa-charrier/tip-calculator-app](https://github.com/elisa-charrier/tip-calculator-app)
+- Live Site URL: [https://elisa-charrier.github.io/tip-calculator-app/](https://elisa-charrier.github.io/tip-calculator-app/)
 
 ## My process
 
@@ -45,20 +46,21 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 - SASS
-- Javascript
+- Javascript 
+- HTML DOM API
 
 ### What I learned
 
-I thought to adding an extra challenge this time: i coded this page in 3 hours without knowing much of javascript DOM access. 
+This was my first challenge using Javascript in a website. I improved my knoledge about Document interface and Javascript event listeners.
+Also, I tried to keep an eye on acessibility.  
 
 ### Continued development
 
-?????????
+My next step will be trying to better organise CSS in order to easly modify and reuse colors, typography, spacing and other variables. Stay tuned to see the next project!
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [WAVE Web Accessibility Evaluation Tool](https://wave.webaim.org/) - This free suite helped me to check accessibility issues of my website.
 
 ## Author
 
