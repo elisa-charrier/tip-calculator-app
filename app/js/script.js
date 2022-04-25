@@ -65,14 +65,14 @@ function resetTips () {
 // BILL
 billInput.oninput = function handleBillInput(e) {
     if (e.target.validity.badInput || e.target.validity.rangeUnderflow) {
-        // controllo se il valore è valido
+        // check validity
         billLog.textContent = `Invalid input`;
         billLog.style.color = `red`;
         billInput.style.border = `1px solid red`;
     } else {
-        // se è valido lo salvo
+        // if it's valid, save it
         bill = e.target.value;
-        billLog.textContent = `Your input is ${bill}`;
+        //billLog.textContent = `Your input is ${bill}`;
         billLog.style.color = `green`;
         billInput.style.border = `1px solid green`;
         calculateResults();
@@ -86,7 +86,7 @@ for (const button of tipButtons) {
 }
 function handleTip(e) {
     tip = (e.target.value).slice(0, -1) / 100;
-    tipLog.textContent = `Your tip is ${tip}`;
+    //tipLog.textContent = `Your tip is ${tip}`;
     tipLog.style.color = `green`;
     resetTips();
     e.target.style.color = `hsl(183, 100%, 15%)`; // very dark cyan
@@ -106,14 +106,14 @@ function handleCustomTip(e) {
 customButton[0].oninput = handleCustomTipInput;
 function handleCustomTipInput(e) {
     if (e.target.validity.badInput) {
-        // controllo se il valore è valido
+        // check validity
         tipLog.textContent = `Invalid input`;
         tipLog.style.color = `red`;
         e.target.style.border = `1px solid red`;
     } else {
-        // se è valido lo salvo
+        // if it's valid, save it
         tip = e.target.value;
-        tipLog.textContent = `your custom tip is ${tip}`;
+        //tipLog.textContent = `your custom tip is ${tip}`;
         tipLog.style.color = `green`;
         e.target.style.border = `1px solid green`;
         calculateResults();
@@ -124,14 +124,14 @@ function handleCustomTipInput(e) {
 // NUMBER OF PEOPLE
 numPeopleInput.oninput = function handleNumPeopleInput(e) {
     if (e.target.validity.rangeUnderflow || e.target.validity.rangeOverflow) {
-        // il numero di persone non può essere uguale a zero e deve essere compreso tra 1 e 100
+        // number of people can't be zero and I set it to be between 1 and 100
         e.target.value === `0` ? numPeopleLog.textContent = `Can't be zero` : numPeopleLog.textContent = `Invalid input`;
         numPeopleLog.style.color = `red`;
         numPeopleInput.style.border = `1px solid red`;
     } else {
-        // se è valido lo salvo
+        // if it's valid, save it
         numPeople = e.target.value;
-        numPeopleLog.textContent = `Your input is ${numPeople}`;
+        //numPeopleLog.textContent = `Your input is ${numPeople}`;
         numPeopleLog.style.color = `green`;
         numPeopleInput.style.border = `1px solid green`;
         calculateResults();
@@ -141,24 +141,9 @@ numPeopleInput.oninput = function handleNumPeopleInput(e) {
 
 // RESULTS
 function calculateResults() {
-    console.log('calcolo...');
-    // controllo se mi manca uno dei valori necessari
-    /* billInput.validity.valid
-    if (bill === '') {
-        billLog.textContent = 'Insert bill';
-        
-    }
-    if (numPeople === '') {
-        numPeopleLog.textContent = 'Insert num. of people';
-        // rosso
-    }
-    if (tip === '') {
-        tipLog.textContent = 'Insert tip';
-        // rosso
-    }*/
-
-    // se ho tutti i valori, calcolo i risultati
+    //console.log('calculating...');
     if (bill !== '' && numPeople !== '' && tip !== '') {
+        // if I have all the values, calculate the results
         console.log(bill / numPeople * tip);
         let tipAmount = bill / numPeople * tip;
         let total = bill / numPeople + (bill / numPeople * tip);
