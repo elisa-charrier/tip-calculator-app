@@ -4,7 +4,7 @@ let billLog = document.getElementById('bill-log');
 
 // tip html elements
 let tipButtons = document.getElementsByClassName('button--cyan');
-let customButton = document.getElementsByClassName('button--grey');
+let customButton = document.getElementById('custom-btn');
 let tipLog = document.getElementById('tip-log');
 
 // num. of people html elements
@@ -16,15 +16,14 @@ let tipAmountOutput = document.getElementById('tip-amount');
 let totalOutput = document.getElementById('total');
 
 // reset html element
-let resetButton = document.getElementsByClassName('button--reset');
+let resetButton = document.getElementById('reset-btn');
 
 // variables
 let bill = '', numPeople = '', tip = '';
 
 
 //RESET
-document.onload = reset();
-resetButton[0].onclick = reset();
+resetButton.addEventListener(`click`, reset);
 function reset() {
     // reset bill log, input and border
     billLog.textContent = '';
@@ -33,12 +32,17 @@ function reset() {
 
     // reset tip log, selected and custom value
     tipLog.textContent = '';
-    resetTips();
-    customButton[0].type = `button`;
-    customButton[0].value = `Custom`;
-    customButton[0].style.textAlign = `center`;
-    customButton[0].style.border = `none`;
-    customButton[0].style.color = `hsl(186, 14%, 40%)`;
+    if (customButton.type === `button`) {
+        // reset default tips
+        resetTips();
+    } else {
+        // reset custom button
+        customButton.type = `button`;
+        customButton.value = `Custom`;
+        customButton.style.textAlign = `center`;
+        customButton.style.border = `none`;
+        customButton.style.color = `hsl(186, 14%, 40%)`;
+    }
 
     // reset number of people log, input and border
     numPeopleLog.textContent = '';
@@ -95,7 +99,7 @@ function handleTip(e) {
 }
 
 // Custom tip
-customButton[0].onclick = handleCustomTip;
+customButton.onclick = handleCustomTip;
 function handleCustomTip(e) {
     if (e.target.type === `button`) {
         e.target.type = `number`;
@@ -103,7 +107,7 @@ function handleCustomTip(e) {
         e.target.style.textAlign = `right`;
     }
 }
-customButton[0].oninput = handleCustomTipInput;
+customButton.oninput = handleCustomTipInput;
 function handleCustomTipInput(e) {
     if (e.target.validity.badInput) {
         // check validity
@@ -144,7 +148,6 @@ function calculateResults() {
     //console.log('calculating...');
     if (bill !== '' && numPeople !== '' && tip !== '') {
         // if I have all the values, calculate the results
-        console.log(bill / numPeople * tip);
         let tipAmount = bill / numPeople * tip;
         let total = bill / numPeople + (bill / numPeople * tip);
         tipAmountOutput.textContent = Math.floor(tipAmount * 100) / 100;
